@@ -22,4 +22,6 @@ canvas {
     image-rendering: pixelated;
     border: 2px solid #4d3180;
 }
-
+:root:fullscreen canvas{
+    border: none;
+}
