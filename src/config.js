@@ -1,6 +1,5 @@
 export const WIDTH = 320;
 export const HEIGHT = 180;
-export const SCALE = 3;
 export const GROUND_Y = 150;
 
 export const CAT_X = 40;
@@ -20,15 +19,21 @@ export const JUMP_V = 308;
 export const JUMP_CUT = 0.45;
 export const FAST_FALL = 1500;
 
+
 export const SPEED_START = 110;
-export const SPEED_MAX = 300;
-export const SPEED_ACCEL = 4;
+export const SPEED_ACCEL = 6;
+export const SPEED_MAX = 600;
+
+export const MAX_DT = 0.05;
+
+// Сколько пикселей пути даёт одно очко
+export const DISTANCE_PER_POINT = 10;
 
 export const GAP_MIN_S = 0.95;
 export const GAP_MAX_S = 1.7;
 
 export const FISH_CHANCE = 0.18;
-export const FISH_POINTS = 50;
+export const FISH_POINTS = 100;
 
 export const PUFF_PERIOD = 0.35;
 export const PUFF_LIFE = 0.8;
@@ -37,6 +42,14 @@ export const PUFF_FRAME_TIME = 0.27;
 
 export const POPUP_LIFE = 0.9;
 export const POPUP_RISE = 22;
+export const POPUP_OFFSET_Y = 2;
+
+export const SPAWN_MARGIN = 8;
+export const DESPAWN_MARGIN = 8;
+export const PUFF_DESPAWN_MARGIN = 20;
+
+export const PUFF_OFFSET_X = 8;
+export const PUFF_OFFSET_Y = 10;
 
 export const FONT_CHARS = '0123456789'
     + 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ'
@@ -44,6 +57,28 @@ export const FONT_CHARS = '0123456789'
     + ' +-.,:!?()/x';
 export const FONT_CELL_W = 8;
 export const FONT_CELL_H = 13;
+
+
+export const UI = {
+    margin: 4,
+    top: 3,
+    lineGap: 3,
+    fishIcon: { x: 5, y: 6 },
+    fishCountX: 30,
+    fishBlinkTime: 0.18,
+    panelTop: 36,
+    panelPadX: 9,
+    panelPadY: 6,
+    promptBlink: 0.5,
+};
+
+export const COLORS = {
+    ink: '#ffe9b8',
+    bonus: '#8fd6f0',
+    shadow: '#1a1530',
+    panel: 'rgba(12, 8, 38, 0.74)',
+    dim: 'rgba(12, 8, 38, 0.6)',
+};
 
 export const RESTART_DELAY = 0.5;
 export const BEST_KEY = 'catroof.best';

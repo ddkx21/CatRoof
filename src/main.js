@@ -4,11 +4,13 @@ import { createState, update } from './game.js';
 import { render } from './render.js';
 import { readInput } from './input.js';
 import { loadBest, saveBest } from './storage.js';
+import {fitCanvas} from "./viewport.js";
 
 const MAX_DT = 0.05;
 
 const canvas = document.getElementById('game');
 const ctx = canvas.getContext('2d');
+fitCanvas(canvas, ctx);
 const images = await loadImages(IMAGES);
 
 let state = createState(loadBest());
